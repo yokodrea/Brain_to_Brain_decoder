@@ -5,3 +5,9 @@ This project aims to decode the neural synchronization during human conversation
 still need to create much better project description and objectives 
 
 need to include shield and be crisp and clear bout research and analysis 
+
+need to use dyadic in this above 
+
+and in read me will discuss what we are gonna do and how we are gonna implement .
+
+
