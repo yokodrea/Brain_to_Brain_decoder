@@ -1,20 +1,21 @@
 
-🧠 Brain-to-Brain Decoding using CEBRA
+# 🧠 Brain-to-Brain Decoding using CEBRA
 
 
 ## Overview
+
 This project aims to decode the temporal dynamics arising from the coordination of multiple neural systems during social     interaction. Using hyperscanning EEG data, we analyze joint neural activity and behavioral signals to learn structured representations through the CEBRA framework.
 
 
 
 ⚙️ What this project does
 
-The notebook implements a full pipeline:
+               The notebook implements a full pipeline:
 
-     EEG preprocessing (ICA, bad channel handling)
-     Temporal alignment of dyadic signals
-     Neural embedding using CEBRA
-     Behavioral decoding using KNN
+                                        EEG preprocessing (ICA, bad channel handling)
+                                        Temporal alignment of dyadic signals
+                                        Neural embedding using CEBRA
+                                        Behavioral decoding using KNN
 
 
 Evaluation using:
