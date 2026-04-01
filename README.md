@@ -9,7 +9,11 @@ This project aims to decode the temporal dynamics arising from the coordination 
 
 
 
+
+
 --------
 
 This project is currently under development and includes my ML4Sci Neurodyads evaluation task implementation.
+
+For deeper insights refer to investigation (it's still in progress will update soon) 
 
