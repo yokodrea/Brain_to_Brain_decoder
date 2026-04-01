@@ -17,3 +17,5 @@ This project is currently under development and includes **My ML4Sci Neurodyads 
 
 **For deeper insights refer to investigation** ( The post investigation is actually completed please check that out and futher we are conducting main analysis for the strategies to tackle the main problems still in progress will update soon) 
 
+If you have any questions or suggestions. Feel free to open an issue.
+
