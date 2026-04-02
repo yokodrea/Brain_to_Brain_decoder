@@ -4,25 +4,25 @@
 
 ### **Post Investigation Metric Results**
 
-**We have really got really fascinating result in block split in contrast of  random split  **
+**We have really got really fascinating result in block split in contrast of  random split**
 
-KNN decoder  accuracy for shuffle control:  **0%**
+ KNN decoder  accuracy for shuffle control:  **0%**
 
-KNN decoder accuracy for main model: **0%**
-
-
-goodness of fit score (supervised model on train set) : **74%**
-
-goodness of fit score (supervised model on test set) : **-0.02** *(error)*
-
-goodness of fit score ( shuffle control on train set) : **-2.87** *(error)*     
-
-goodness of fit score (shuffled control test set) :  **-1.09** *(error)*
+ KNN decoder accuracy for main model: **0%**
 
 
-Now this makes us question further on our previous ?
+ goodness of fit score (supervised model on train set) : **74%**
 
-So let's start with Why 99% on random split and why** 0%** on block split ? if read the blog you might know . our model is cheating  by memorizing the train data and outputting the test value of the nearest training example **Nearest neighbours interpolation**
+ goodness of fit score (supervised model on test set) : **-0.02** *(error)*
+
+ goodness of fit score ( shuffle control on train set) : **-2.87** *(error)*     
+
+ goodness of fit score (shuffled control test set) :  **-1.09** *(error)*
+
+
+ Now this makes us question further on our previous ?
+
+ So let's start with Why 99% on random split and why** 0%** on block split ? if read the blog you might know . our model is cheating  by memorizing the train data and  outputting the test value of the nearest training example **Nearest neighbours interpolation**
 
 So we avoid this by doing **block split** or **stratified splitting techniques** or other techniques for decorrelating the data.
 
@@ -35,4 +35,7 @@ So the previous limitation is not valid ? No, it's vaild generalization comes un
 
 So now Temporal leakage/Temporal alignment of EEG data which is segmental limitation of our big picture. Not that it can be ignored . It's the limitation of the given dataset.
 
-**"Temporal leakage is a segmental limitation of the dataset. Generalization is the bigger picture limitation."**
+**"Temporal leakage/Temporal autocorrrelation is a segmental limitation of the dataset. Generalization is the bigger picture limitation."**
+
+
+## Results Above arises futher questions does our model learned ? How ? why? (I'm still investigating this part I'll update it pretty soon.) 
