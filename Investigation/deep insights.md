@@ -38,6 +38,6 @@ So now Temporal leakage/Temporal alignment of EEG data which is segmental limita
 **"Temporal leakage/Temporal autocorrrelation is a segmental limitation of the dataset. Generalization is the bigger picture limitation."**
 
 
-## Results Above arises futher questions does our model learned ?(I'm still investigating this part I'll update it pretty soon.) 
+## Results Above arises futher questions does our model learned ?(I'm still investigating this part I'll update it pretty soon (within next week).
 
 [CEBRA PAPER](https://arxiv.org/abs/2204.00673)
