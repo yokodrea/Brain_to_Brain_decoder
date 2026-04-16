@@ -22,7 +22,7 @@
 
  Now this makes us question further on our previous ?
 
- So let's start with Why 99% on random split and why** 0%** on block split ? if read the blog you might know . our model is cheating  by memorizing the train data and  outputting the test value of the nearest training example **Nearest neighbours interpolation**
+ So let's start with Why **99%** on random split and why **0%** on block split ? if read the blog you might know . our model is cheating  by memorizing the train data and  outputting the test value of the nearest training example **Nearest neighbours interpolation**
 
 So we avoid this by doing **block split** or **stratified splitting techniques** or other techniques for decorrelating the data.
 
