@@ -43,9 +43,11 @@ So now Temporal leakage/Temporal alignment of EEG data which is segmental limita
 
 ### experimenting :
 
-**main model** 
- for default parameter and just robust scalar
- KNN accuracy: 0.000
+#### **main model** 
+
+ for default parameter
+ 
+ KNN accuracy: 0%
  Supervised Train gof : 0.742813240612608 
  Supervised Test gof : -0.01799708731630236
 
@@ -60,17 +62,17 @@ So now Temporal leakage/Temporal alignment of EEG data which is segmental limita
  Supervised Test gof : -0.1092668382266495
 
  for batch_size = 128 and max_iter = 1000 
- knn = 0
+ knn  : 0 %
  Supervised Train gof : 0.7431628675754263 
  Supervised Test gof : -0.039260148604888016
 
  for max_iter = 500 and batch_size = 128 
- knn = 0 
+ knn : 0 % 
  Supervised Train gof : 0.7440594392757375 
  Supervised Test gof : -0.06552703548152428
 
  for max_iter = 50000 and batch_size = 128
- knn = 0
+ knn : 0 %
  Supervised Train gof : 0.7441995184569344 
  Supervised Test gof : -0.055326441769385934
 
