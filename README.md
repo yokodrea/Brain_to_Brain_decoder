@@ -16,5 +16,6 @@ This project aims to decode the temporal dynamics arising from the coordination 
 This project includes **My ML4Sci Neurodyads evaluation task implementation (in file Brain_to_Brain_Decoder)**.
 
 **For deeper insights refer to investigation.md**
-If you have any questions or suggestions. Feel free to open an issue.
+
+*If you have any questions or suggestions. Feel free to open an issue.*
 
