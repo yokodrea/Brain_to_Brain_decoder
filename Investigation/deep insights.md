@@ -1,23 +1,19 @@
-# (Post submission investigation)
+# Post Submission Investigation 
 
-## Still working on futher analysis on main goal
+# Metric Results
 
-### **Post Investigation Metric Results**
+### We have really got really fascinating result in block split in contrast of  random split**
 
-**We have really got really fascinating result in block split in contrast of  random split**
++ **KNN decoder  accuracy (main model) :**  **0%**
++  **KNN decoder accuracy  (shuffle control) :** **0%**
 
- KNN decoder  accuracy for shuffle control:  **0%**
+ + **goodness of fit score (supervised model on train set) :** **74%**
 
- KNN decoder accuracy for main model: **0%**
+ + **goodness of fit score (supervised model on test set) :** **-0.02** *(error)*
 
+ + **goodness of fit score ( shuffle control on train set) :** **-2.87** *(error)*     
 
- goodness of fit score (supervised model on train set) : **74%**
-
- goodness of fit score (supervised model on test set) : **-0.02** *(error)*
-
- goodness of fit score ( shuffle control on train set) : **-2.87** *(error)*     
-
- goodness of fit score (shuffled control test set) :  **-1.09** *(error)*
+  + **goodness of fit score (shuffled control test set) :**  **-1.09** *(error)* 
 
 
  Now this makes us question further on our previous ?
@@ -37,49 +33,86 @@ So now Temporal leakage/Temporal alignment of EEG data which is segmental limita
 
 **"Temporal leakage/Temporal autocorrrelation is a segmental limitation of the dataset. Generalization is the bigger picture limitation."**
 
+
+--------------------
+
+
+**A primary cause is training an overly complex model
+on a small dataset. The model complexity often matters when we design a machine learning
+model. If the model is complex and has many parameters, then it would be much easier to
+overfit a small number of samples. So in this case cebra which is a complex model and small dataset N = 1 dyad which makes it easy for our model overfit.**
+
+it is difficult to discriminate the influence of the inherent temporal 
+autocorrelation in EEG signals due to the coupling of stimuli-driven neural responses and the 
+temporal autocorrelations [Overestimated Decoding Performance Arising from Temporal Autocorrelations in EEG signals](https://arxiv.org/pdf/2405.17024)
+
+
+Solution : **LODO strategy** and **data spliting strategy**  (it was also mentioned on the cited research paper).
+
 In order to know more about overstimation of decoding performance due to temporal autocorrelations read this to get clear idea [Overestimated Decoding Performance Arising from Temporal Autocorrelations in EEG signals](https://arxiv.org/pdf/2405.17024)
 
 
-## Results above arises futher questions does our model learned ?(I'm still investigating this part I'll update it pretty soon).
 
 
-### experimenting :
+## Experimentation of Parameter optimization :
 
-#### **main model** 
+### **Main Model** 
 
- for default parameter
+### for default parameter
  
- KNN accuracy: 0%
- Supervised Train gof : 0.742813240612608 
- Supervised Test gof : -0.01799708731630236
+ KNN accuracy: **0%**
+ 
+ Supervised Train gof : **0.742813240612608**
+ 
+ Supervised Test gof : **-0.01799708731630236**
 
- for max iter = 1000 
- knn = 0 
- Supervised Train gof : 0.7437666133669849 
- Supervised Test gof : -0.07291564955466598
+ ### for max iter = 1000
+ 
+ knn = **0%**
+ 
+ Supervised Train gof : **0.7437666133669849**
+ 
+ Supervised Test gof : **-0.07291564955466598**
+ 
 
- for max iter = 500
- knn = 0
- Supervised Train gof : 0.7427407726269804 
- Supervised Test gof : -0.1092668382266495
-
- for batch_size = 128 and max_iter = 1000 
- knn  : 0 %
- Supervised Train gof : 0.7431628675754263 
- Supervised Test gof : -0.039260148604888016
-
- for max_iter = 500 and batch_size = 128 
- knn : 0 % 
- Supervised Train gof : 0.7440594392757375 
- Supervised Test gof : -0.06552703548152428
-
- for max_iter = 50000 and batch_size = 128
- knn : 0 %
- Supervised Train gof : 0.7441995184569344 
- Supervised Test gof : -0.055326441769385934
+ ### for max iter = 500
+ 
+ knn = **0%**
+ Supervised Train gof : **0.7427407726269804** 
+ Supervised Test gof : **-0.1092668382266495**
 
  
 
+ ### for batch_size = 128 and max_iter = 1000
+
+ knn  : **0%**
+ 
+ Supervised Train gof : **0.7431628675754263**
+ 
+ Supervised Test gof : **-0.039260148604888016**
 
 
-[CEBRA PAPER](https://arxiv.org/abs/2204.00673)
+ ### for max_iter = 500 and batch_size = 128 
+ 
+ knn : **0%**
+ 
+ Supervised Train gof : **0.7440594392757375** 
+ Supervised Test gof : **-0.06552703548152428**
+
+ ### for max_iter = 50000 and batch_size = 128
+ 
+ knn : **0%**
+ 
+ Supervised Train gof : **0.7441995184569344** 
+ 
+ Supervised Test gof : **-0.055326441769385934**
+
+ -------
+
+  **"After experimenting various parameter tuning (max_iter: 500-5000, batch_size: 128-512, RobustScaler/StandardScalar), the model consistently achieved **~0.74 train GoF** but negative test GoF and **0% KNN accuracy** *"This confirms that the dataset contains a fundamental temporal confound that cannot be overcome by parameter optimization. The model learns the training data but fails to generalize (**test GoF negative, KNN = 0%**), which proves that the limitation is structural to the dataset, not technical to the implementation."***
+
+ 
+
+
+
+
