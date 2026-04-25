@@ -37,6 +37,8 @@ So now Temporal leakage/Temporal alignment of EEG data which is segmental limita
 
 **"Temporal leakage/Temporal autocorrrelation is a segmental limitation of the dataset. Generalization is the bigger picture limitation."**
 
+In order to know more about overstimation of decoding performance due to temporal autocorrelations read this to get clear idea [Overestimated Decoding Performance Arising from Temporal Autocorrelations in EEG signals](https://arxiv.org/pdf/2405.17024)
+
 
 ## Results above arises futher questions does our model learned ?(I'm still investigating this part I'll update it pretty soon).
 
